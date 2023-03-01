@@ -1,0 +1,394 @@
+﻿
+/*------------Style for Everything ---------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .media-element {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+html, body, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+#fullheight {
+    width: 250px;
+    background: white;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* -------------- Header-------------------------------------- */
+
+
+/* Header Image */
+.header {
+                  /* insert Image Name Here */
+  background-image: url(background1.jpg);
+
+  padding: 80px;
+  height: 100%;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* Header Text */
+    .header h1 {
+        font-size: 50px;
+        padding: 10%;
+        text-align: center;
+        letter-spacing: 10px;
+        word-spacing: 21px;
+        font-family: Raleway;
+        text-shadow: 2px 2px 30px black;
+        color: white;
+    }
+
+
+/* ----------- Navigation Bar ---------------------------------------*/
+.navbar
+{
+    position: relative;
+    transition: all 0.3s ease-out; 
+    background-color: #979797;
+    font-family: Raleway;
+    color: White;
+    margin: 0 auto;
+	padding: 30px;
+    word-spacing: 60px;
+    letter-spacing: 3px;
+	text-align: center;
+    box-shadow: 5px 5px 100px 15px grey;
+}
+
+
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* scrolling colors */
+}
+
+.navbar a
+{
+    color: #FFF;
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.navbar a:before, .navbar a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.navbar.fixed-top a {color: white;}
+.navbar a:before {top: 0px; transform: translateY(-10px);}
+.navbar a:after {bottom: 0px;transform: translateY(10px);}
+.navbar a:hover:before, .navbar a:hover:after {opacity: 1; transform: translateY(0px);}
+
+
+/*----------About Me-------------------------------------------------*/
+
+.About-Header h1 {
+  font-size:20px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  letter-spacing: 10px;
+  word-spacing: 21px;
+  font-family: Raleway;
+  text-shadow: 2px 2px 30px #676767;
+  color: #565656;
+}
+
+.card-Text {
+  box-shadow: 0 4px 20px 0 grey;
+  padding: 16px;
+  text-align: center;
+  background-color: #EDEDED;
+  height: 400px;
+}
+
+.card-Text p{
+  font-size:15px;
+  padding: 1px;
+  text-align: center;
+  font-family: Raleway;
+  text-shadow: 2px 2px 30px darkgrey;
+  color: #514037;
+}
+
+.card-Photo {
+  padding: 16px;
+  background: url(Headshot.jpg);
+  background-size: cover;
+  background-position: center; 
+  height: 400px;
+}
+
+
+.column { float: left; width: 50%; padding: 0 30px;}
+.row {margin: 0 -5px;}
+.row:after {content: ""; display: table; clear: both;}
+
+/*----------Portfolio explanation-----------*/
+
+.Localization h2 {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    letter-spacing: 10px;
+    word-spacing: 21px;
+    font-family: Raleway;
+    text-shadow: 2px 2px 30px #676767;
+    color: #565656;
+}
+.Localization p {
+    font-size: 15px;
+    padding: 1px;
+    text-align: center;
+    font-family: Raleway;
+    text-shadow: 2px 2px 40px darkgrey;
+    color: #514037;
+}
+
+
+
+.Details h2 {
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    text-align: center;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-family: Raleway;
+    text-shadow: 2px 2px 30px #676767;
+    color: #565656;
+}
+
+.Details p {
+    font-size: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: Raleway;
+    text-shadow: 2px 2px 40px darkgrey;
+    color: #514037;
+    margin: 8px;
+    color: #514037;
+}
+
+.card {
+    
+    transition: 0.3s;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+}
+
+
+
+/*----------Portfolio-----------*/
+
+.Portfolio{
+    margin: auto;  
+    text-align: center;
+    z-index:1;
+    position: center;
+    padding: 5px;
+}
+
+.Portfolio h1 {
+  font-size:20px;
+  padding-top: 8%;
+  padding-bottom: 10%;
+  text-align: center;
+  letter-spacing: 10px;
+  word-spacing: 21px;
+  font-family: Raleway;
+  text-shadow: 2px 2px 30px #676767;
+  color: #565656;
+}
+
+
+/*------------------------------------More PortFolio-----------------------------------------------------------*/
+
+
+.media-container {position: relative;}
+
+.media-scroller,
+.media-group { display: grid; gap: 0.25rem; grid-auto-flow: column;}
+
+.media-scroller {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    grid-auto-columns: 100%;
+    padding: 0 3rem;
+    scroll-padding-inline: 3rem;
+}
+
+.media-group { grid-auto-columns: 1fr;}
+
+
+.media-element {
+    border-radius: 0.25rem;
+    overflow: hidden;
+    transition: transform 500ms ease-in-out;
+}
+
+    /*-- change size of video when hovered*/
+.media-element:hover {
+        transform: scale(1.2);
+        transition: transform 350ms ease-in-out;
+    }
+
+ .media-element > img {
+        width: 80%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin-top: 10px;
+  }
+.media-element > mp4 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.next,
+.previous {
+    display: none;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    width: 3rem;
+    padding: 1rem;
+    background: rgb(0 0 0 / 0);
+    opacity: 0;
+}
+
+.previous {
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.next {
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.media-group:first-child :where(.next, .previous) { display: flex;}
+.media-scroller:hover :where(.next, .previous) { opacity: 1;}
+:where(.next, .previous):hover { background: rgb(0 0 0 / 0.3);}
+:where(.next, .previous) > svg {transition: transform 100ms linear;transform: scale(1);}
+:where(.next, .previous):hover > svg { transform: scale(1.2);}
+.media-group:target :where(.next, .previous) { display: flex;}
+.media-scroller:has(:target:not(:first-child))
+.media-group:first-of-type
+.next {display: none;}
+
+.navigation-indicators {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    gap: 3px;
+    top: -1rem;
+    right: 2rem;
+}
+
+    .navigation-indicators > * {
+        width: 1rem;
+        height: 2px;
+        background: white;
+        opacity: 0.5;
+    }
+
+.media-scroller:has(.media-group:target)
+.navigation-indicators > *:nth-child(1) {opacity: 0.5;}
+.navigation-indicators > *:nth-child(1),
+.media-group:nth-child(1):target ~ .navigation-indicators > *:nth-child(1) {opacity: 1;}
+.media-group:nth-child(2):target ~ .navigation-indicators > *:nth-child(2) {opacity: 1;}
+.media-group:nth-child(3):target ~ .navigation-indicators > *:nth-child(3) {opacity: 1;}
+.media-group:nth-child(4):target ~ .navigation-indicators > *:nth-child(4) {opacity: 1;}
+.media-scroller:hover .navigation-indicators {opacity: 1;}
+
+
+
+/*-----------------------------WORK SECTION ------------------------------------------*/
+
+
+
+.Work {
+    margin: auto;
+    text-align: center;
+    z-index: 1;
+    position: center;
+    padding: 5px;
+}
+
+    .Work h1 {
+        font-size: 20px;
+        padding-top: 12%;
+        padding-bottom: 10%;
+        text-align: center;
+        letter-spacing: 10px;
+        word-spacing: 21px;
+        font-family: Raleway;
+        text-shadow: 2px 2px 30px #676767;
+        color: #565656;
+    }
+
+    .Work p {
+        font-size: 12px;
+        padding-top:5%;
+        padding-bottom: 10%;
+        text-align: center;
+        letter-spacing: 10px;
+        word-spacing: 21px;
+        font-family: Raleway;
+        text-shadow: 2px 2px 30px #676767;
+        color: #565656;
+    }
+
