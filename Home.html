@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NickWillson.com</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="StyleSheet.css">
+    <script type="text/javascript" src="Script.js"></script>
+
+</head>
+<body>
+
+    <div class="header">
+        <!--Header-->
+        <h1>Nick Willson</h1>
+    </div>
+
+    <div class="navbar">
+        <!--NavBar-->
+        <a href="Home.html">HOME</a>
+        <a href="#About-Section">ABOUT</a>
+        <a href="#Portfolio-Section">PORTFOLIO</a>
+        <a href="#Work-Section">WORK</a>
+        <a>CONTACT</a>
+    </div>
+
+
+    <div class="About-Header" id="About-Section">
+        <h1>ABOUT ME</h1>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card-Text">
+                <p>
+                    My Name is Nick Willson and I am a software engineer and full-stack developer. Ever since I was a kid I have
+                    beeen engineering in some way or another. I remember building contraptions of strings cardboard and pulleys nailed to the ceiling so that
+                    I could make a switch that would turn off my bedroom lights when stepped on. Some would say a born engineer.
+                </p><br><br>
+                <p>
+                    Later in life I found
+                    myself passionate about a many great things such as art, science, cooking, and wordworking, all of which have an overall theme of
+                    me wanting to build things.
+                    These experiences along with others helped spark my interest for being a computer programmer. 5 years later and I feel that I have
+                    successfully found another passion, one in which I can build, engineer, problem solve, and innovate.
+                </p><br><br>
+                <p>
+                    Within my time at the Universty of Colorado as well as a private University in CA, I had a lot of exposure to multiple programming languages 
+                    as well as the various stuctures and common practices throughout programming. I also learned the importance of building a strong logical foundation for 
+                    the projects I want to pursue, in order to stop catastrophes down the lime. Now armed with a bachelors degree in Computer Science, 
+                    I am ready to put my skills as a well-versed programmer to the test, in the hope that I will be able to combine my passion to create with my 
+                    need to do something meaningful.
+                </p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card-Photo">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="Portfolio" id="Portfolio-Section">
+        <!----Portfolio-->
+        <h1>PORTFOLIO</h1>
+    </div>
+    <p />
+
+    <!------------------------------------------------->
+
+    <div class="media-container">
+        <div class="media-scroller">
+
+            <!--   Group 1 -->
+            <div class="media-group" id="group-1">
+                <a class="previous" href="#group-2">
+                    <svg>
+                        <use href="#previous"></use>
+                    </svg>
+                </a>
+                <div class="media-element">
+                    <video width="320" height="240" controls>
+                        <source src="Sequence Editor.mp4" type=video/mp4>
+                    </video>
+                </div>
+                <div class="media-element">
+                    <video width="320" height="240" controls>
+                        <source src="item_editor.mp4" type=video/mp4>
+                    </video>
+                </div>
+                <div class="media-element">
+                    <video width="320" height="240" controls>
+                        <source src="CSV.mp4" type=video/mp4>
+                    </video>
+                </div>
+
+                <a class="next" href="#group-2" aria-label="next">
+                    <svg>
+                        <use href="#next"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Group 2   -->
+            <div class="media-group" id="group-2">
+                <a class="previous" href="#group-1">
+                    <svg>
+                        <use href="#previous"></use>
+                    </svg>
+                </a>
+                <div class="media-element">
+                    <video width="320" height="240" controls>
+                        <source src="Localization.mp4" type=video/mp4>
+                    </video>
+                </div>
+                <div class="media-element">
+                    <video width="320" height="240" controls>
+                        <source src="Website Redesign.mp4" type=video/mp4>
+                    </video>
+                </div>
+                <div class="media-element">
+                    <video width="320" height="240" controls>
+                        <source src="Misc_Extensions1.mp4" type=video/mp4>
+                    </video>                </div>
+                <a class="next" href="#group-1" aria-label="next">
+                    <svg>
+                        <use href="#next"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Page Indicators -->
+            <div class="navigation-indicators">
+                <!-- 2 Groups -->
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <svg>
+        <symbol id="next" viewBox="0 0 256 512">
+            <path fill="white"
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+        </symbol>
+        <symbol id="previous" viewBox="0 0 256 512">
+            <path fill="white"
+                  d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+        </symbol>
+    </svg>
+
+
+    <!-- script for hiding video controls-->
+    <script>
+        function setupVideos() {
+            for (const video of document.querySelectorAll('video')) {
+                video.controls = false
+                video.addEventListener('mouseover', () => { video.controls = 'controls' })
+                video.addEventListener('mouseout', () => { video.controls = false })
+            }
+        }
+        window.addEventListener('load', setupVideos, false)
+    </script>
+
+
+    <!------------------------------------------------->
+
+    <div class="Details">
+        <div class="details-Sequence Editor">
+            <h2>Video Spec Changer</h2>
+            <div class="card">
+                <p>
+                    For this program I wanted to make a quick extension that the video editors could use to quickly and efficiently change all the specs of their video clips
+                    within one easy to use extension. This idea came about after interviewing the head of the post-production team in which he confided in me how annoying it
+                    could be to have to go through and change the specs of every single clip in a trailer in order to get it ready for multiple platforms (think of the differences
+                    in width, height, and resolution between a youtube video and a tiktok video), so I made the above program in order to change all of the video specs of a clip in
+                    the push of a button.
+                </p>
+            </div>
+        </div>
+
+        <div class="details-Item_editor">
+            <h2>Adobe Clip Editor</h2>
+            <div class="card">
+                <p>
+                    Although Adobe Premiere Pro is a great tool for video editing, and can be lacking some common features we are use to, such as a find and replace. This program
+                    was my most complicated one yet, in which I tried to make a one stop for all extensions where editors could go and do a whole variety of different actions on their
+                    video clips. This took up most of my time when working at STARZ, but was worth it. I was able to make a find and replace, a prefix and suffix adder, a remove all text,
+                    and a change video spec options. All of which can either be used on video clip, Video folders, image layers , text layers, and comps (which are multiple clips seemed together)
+                    and have the choice of being case-sensitive to upper and lower case.
+                </p>
+            </div>
+        </div>
+
+        <div class="details-CSV">
+            <h2>Create Video From CSV File</h2>
+            <div class="card">
+                <p>
+                    One day my manager came up to me and told me that he learned that there was an employee down in the basement having to manually edit, change the specs of,
+                    and encode (render) hundreds of videos stored on the company servers, and asked if I could lend a hand. I created a program which takes in a CSV file
+                    containing the path of the video on our server, as well as the audio your want for that video, along with the frame rate and dimensions you want the
+                    video to be into. After creating this CSV file you simply open my Adobe extension, upload the CSV file, and watch while my program will automatically
+                    combine the video with the audio, change the specs to the correct frame rate and dimensions, render this video, encode it, and then send all the
+                    finalized videos to a folder of your choosing. This one was real difficultt but very satisfying once I got it working.
+                </p>
+            </div>
+        </div>
+
+        <div class="details-Localization">
+            <h2>Video Localization</h2>
+            <div class="card">
+                <p>
+                    For this program I was tasked with preparing movie clips for localization, which is what happes when an movie needs translations into other languages. For this
+                    program I was tasked with making the process of preparing a video for localization easier for the editors. Normally what happens when an editor is localizing a clip is
+                    that he would have to find all the clips that contain english lets say, grab these clips and export them, then go to each clip and add the name of the language it needs
+                    to be translated into, but that edited clip back into the sequence (movie/trailer/eg.) and then send this whole sequence to a folder with the name of the needed language
+                    translation, and do this for every language needed. Well I thought that just sounded like to many stepe, so I created a program in which all the editors need to do is
+                    open my extension, select the clips that need translation, and tell the extension what languages you want to turn it into. From here my program does the rest of the work,
+                    and puts all the videos now ready to be sent to the translation team in a nice neat folder on your desktop (or wherever you'd like)
+                </p>
+            </div>
+        </div>
+
+        <div class="details-Website_Redesign">
+            <h2>Website Redesign </h2>
+            <div class="card">
+                <p>
+                    For this project my team and I were in charge of doing an entire overhaul of the website building bridges. We were tasked with changing all the aspects
+                    of the sight that needed to be changed in order to facilitate the use of the sight people with disabilities, with disabilities including things such as poor
+                    vision or unable to use a mouse/scroll wheel. This is very important for a website, and is something a lot of people overlook. The process of redesigning a
+                    website starts with using an extension tool on your browser to identify problems such as contrast or structural errors. We then go about fixing the internal HTML
+                    of the website to facilitate use by the disabled, and then restructure the styling of the sight so that all contrast errors are gone, as well as making it overall easier
+                    to navigate.
+                </p>
+            </div>
+        </div>
+
+        <div class="Misc-Extensions">
+            <h2>Misc Panel Extensions </h2>
+            <div class="card">
+                <p>These were some of the first extensions created for Adobe's PPRO and Encoder. The purpose of these three extensions where to make some of the most common
+                    tasks in an editors life just a little bit fast. The first extension seen in this video is simply a catch all for what an editor might need, whether it be how
+                many clips or words are in a video, or to upload a template for title cards, or to create the defaulted STARZ editor set up. The last two extensions are just to shorten
+                the number of buttons that editors needed to press when either exporting bins (which are simply folders with videos inside), or creating them, and although they seem quite simply
+                in both appearence and technicality, they can be mightly useful time-savers.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="Work" id="Work-Section">
+        <h1>WORK EXPERIENCE</h1>
+    </div>
+
+</body>
+
+</html>
