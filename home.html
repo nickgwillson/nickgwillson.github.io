@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <title>NickWillson.com</title>
+    <meta name="author" content="Nick Willson">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta http-equiv="refresh" content="10">-->
     <link rel="stylesheet" href="StyleSheet.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -72,19 +74,22 @@
     <div class="Portfolio" id="Portfolio-Section">
         <h1>PORTFOLIO</h1>
     </div>
-    <p />
 
 
     <div class="media-container">
         <div class="media-scroller">
 
-            <!--   Group 1 -->
+            <!--  Video Group 1 -->
             <div class="media-group" id="group-1">
+
+                <!------Left Arrow----->
                 <a class="previous" href="#group-2">
                     <svg>
                         <use href="#previous"></use>
                     </svg>
                 </a>
+
+                <!---media elements-->
                 <div class="media-element">
                     <video width="320" height="240" controls>
                         <source src="Images/Sequence Editor.mp4" type=video/mp4>
@@ -101,6 +106,7 @@
                     </video>
                 </div>
 
+                <!---Right Arrow-->
                 <a class="next" href="#group-2" aria-label="next">
                     <svg>
                         <use href="#next"></use>
@@ -110,11 +116,14 @@
 
             <!-- Group 2   -->
             <div class="media-group" id="group-2">
+
+                <!-----Left Arrow---->
                 <a class="previous" href="#group-1">
                     <svg>
                         <use href="#previous"></use>
                     </svg>
                 </a>
+
                 <div class="media-element">
                     <video width="320" height="240" controls>
                         <source src="Images/Localization.mp4" type=video/mp4>
@@ -130,14 +139,17 @@
                         <source src="Images/Misc_Extensions1.mp4" type=video/mp4>
                     </video>
                 </div>
+
+                <!-----Right Arrow-->
                 <a class="next" href="#group-1" aria-label="next">
                     <svg>
                         <use href="#next"></use>
                     </svg>
                 </a>
+
             </div>
 
-            <!-- Page Indicators -->
+            <!-- Page Indicators-->
             <div class="navigation-indicators">
                 <!-- 2 Groups -->
                 <div></div>
@@ -169,192 +181,190 @@
         window.addEventListener('load', setupVideos, false)
     </script>
 
-
     <!------------------PORTFOLIO EXPLANATION------------------------------->
+ 
+        <div class="Details">
+            <div class="details-Sequence Editor">
+                <h2>Video Spec Changer</h2>
+                <div class="card">
+                    <p>
+                        For this program I wanted to make a quick extension that the video editors could use to quickly and efficiently change all the specs of their video clips
+                        within one easy to use extension. This idea came about after interviewing the head of the post-production team in which he confided in me how annoying it
+                        could be to have to go through and change the specs of every single clip in a trailer in order to get it ready for multiple platforms (think of the differences
+                        in width, height, and resolution between a youtube video and a tiktok video), so I made the above program in order to change all of the video specs of a clip in
+                        the push of a button.
+                    </p>
+                </div>
+            </div>
 
-    <div class="Details">
-        <div class="details-Sequence Editor">
-            <h2>Video Spec Changer</h2>
-            <div class="card">
-                <p>
-                    For this program I wanted to make a quick extension that the video editors could use to quickly and efficiently change all the specs of their video clips
-                    within one easy to use extension. This idea came about after interviewing the head of the post-production team in which he confided in me how annoying it
-                    could be to have to go through and change the specs of every single clip in a trailer in order to get it ready for multiple platforms (think of the differences
-                    in width, height, and resolution between a youtube video and a tiktok video), so I made the above program in order to change all of the video specs of a clip in
-                    the push of a button.
-                </p>
+            <div class="details-Item_editor">
+                <h2>Adobe Clip Editor</h2>
+                <div class="card">
+                    <p>
+                        Although Adobe Premiere Pro is a great tool for video editing, and can be lacking some common features we are use to, such as a find and replace. This program
+                        was my most complicated one yet, in which I tried to make a one stop for all extensions where editors could go and do a whole variety of different actions on their
+                        video clips. This took up most of my time when working at STARZ, but was worth it. I was able to make a find and replace, a prefix and suffix adder, a remove all text,
+                        and a change video spec options. All of which can either be used on video clip, Video folders, image layers , text layers, and comps (which are multiple clips seemed together)
+                        and have the choice of being case-sensitive to upper and lower case.
+                    </p>
+                </div>
+            </div>
+
+            <div class="details-CSV">
+                <h2>Create Video From CSV File</h2>
+                <div class="card">
+                    <p>
+                        One day my manager came up to me and told me that he learned that there was an employee down in the basement having to manually edit, change the specs of,
+                        and encode (render) hundreds of videos stored on the company servers, and asked if I could lend a hand. I created a program which takes in a CSV file
+                        containing the path of the video on our server, as well as the audio your want for that video, along with the frame rate and dimensions you want the
+                        video to be into. After creating this CSV file you simply open my Adobe extension, upload the CSV file, and watch while my program will automatically
+                        combine the video with the audio, change the specs to the correct frame rate and dimensions, render this video, encode it, and then send all the
+                        finalized videos to a folder of your choosing. This one was real difficultt but very satisfying once I got it working.
+                    </p>
+                </div>
+            </div>
+
+            <div class="details-Localization">
+                <h2>Video Localization</h2>
+                <div class="card">
+                    <p>
+                        For this program I was tasked with preparing movie clips for localization, which is what happes when an movie needs translations into other languages. For this
+                        program I was tasked with making the process of preparing a video for localization easier for the editors. Normally what happens when an editor is localizing a clip is
+                        that he would have to find all the clips that contain english lets say, grab these clips and export them, then go to each clip and add the name of the language it needs
+                        to be translated into, but that edited clip back into the sequence (movie/trailer/eg.) and then send this whole sequence to a folder with the name of the needed language
+                        translation, and do this for every language needed. Well I thought that just sounded like to many stepe, so I created a program in which all the editors need to do is
+                        open my extension, select the clips that need translation, and tell the extension what languages you want to turn it into. From here my program does the rest of the work,
+                        and puts all the videos now ready to be sent to the translation team in a nice neat folder on your desktop (or wherever you'd like)
+                    </p>
+                </div>
+            </div>
+
+            <div class="details-Website_Redesign">
+                <h2>Website Redesign </h2>
+                <div class="card">
+                    <p>
+                        For this project my team and I were in charge of doing an entire overhaul of the website building bridges. We were tasked with changing all the aspects
+                        of the sight that needed to be changed in order to facilitate the use of the sight people with disabilities, with disabilities including things such as poor
+                        vision or unable to use a mouse/scroll wheel. This is very important for a website, and is something a lot of people overlook. The process of redesigning a
+                        website starts with using an extension tool on your browser to identify problems such as contrast or structural errors. We then go about fixing the internal HTML
+                        of the website to facilitate use by the disabled, and then restructure the styling of the sight so that all contrast errors are gone, as well as making it overall easier
+                        to navigate.
+                    </p>
+                </div>
+            </div>
+
+            <div class="Misc-Extensions">
+                <h2>Misc Panel Extensions </h2>
+                <div class="card">
+                    <p>
+                        These were some of the first extensions created for Adobe's PPRO and Encoder. The purpose of these three extensions where to make some of the most common
+                        tasks in an editors life just a little bit fast. The first extension seen in this video is simply a catch all for what an editor might need, whether it be how
+                        many clips or words are in a video, or to upload a template for title cards, or to create the defaulted STARZ editor set up. The last two extensions are just to shorten
+                        the number of buttons that editors needed to press when either exporting bins (which are simply folders with videos inside), or creating them, and although they seem quite simply
+                        in both appearence and technicality, they can be mightly useful time-savers.
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="details-Item_editor">
-            <h2>Adobe Clip Editor</h2>
-            <div class="card">
-                <p>
-                    Although Adobe Premiere Pro is a great tool for video editing, and can be lacking some common features we are use to, such as a find and replace. This program
-                    was my most complicated one yet, in which I tried to make a one stop for all extensions where editors could go and do a whole variety of different actions on their
-                    video clips. This took up most of my time when working at STARZ, but was worth it. I was able to make a find and replace, a prefix and suffix adder, a remove all text,
-                    and a change video spec options. All of which can either be used on video clip, Video folders, image layers , text layers, and comps (which are multiple clips seemed together)
-                    and have the choice of being case-sensitive to upper and lower case.
-                </p>
+
+        <!----------------------RESUME------------------------------------->
+        <div class="Work" id="Work-Section">
+            <h1>PROFESSIONAL EXPERIENCE</h1>
+            <h2>SKILLS</h2>
+            <ul class="w3-ul">
+                <li></li>
+                <li>C++</li>
+                <li>HTML</li>
+                <li>Python</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li></li>
+            </ul>
+            <br /><br /><br /><br /><br />
+            <h2>JOBS</h2>
+            <ul class="w3-ul">
+                <li></li>
+                <li><h3>MIDDLEWARE DEVELOPER - STARZ ENTERTAINMENT LLC</h3></li>
+                <li></li>
+            </ul>
+            <p>
+                Solely responsible for full development, testing, and launching of Adobe panel
+                extensions for STARZ’s entire production team. As the only employee working on panel extensions, my job was to
+                develop panel extensions for the production team with an express goal of decreasing number of repetitive tasks
+                performed. Learned unique industry practices in 2 weeks, and by the end of 4 months, created 7 independent
+                ready-to-publish Adobe extensions.
+            </p>
+            <p id="Work-bulletin">
+                <br />● Developed and maintained custom-made Adobe extensions using Python, JS, CSS, and HTML
+                <br />● Created Adobe Photoshop/PPRO extensions using VSC, Adobe’s APIs, AGILE and OOP methodologies
+                <br />● First point of contact in STARZ’s Englewood location for troubleshooting Adobe extensions
+                <br />● Interviewed heads of production in order to ascertain areas of improvement
+                <br />● Learned new industry methods and how to perform in a solo environment
+            </p>
+            <br /><br /><br /><br /><br />
+
+
+            <h2>COURSEWORK</h2>
+            <table>
+                <tr>
+                    <td>Computer Science l,ll</td>
+                    <td>Data Structures </td>
+                    <td>CyberSecurity </td>
+                </tr>
+                <tr>
+                    <td>Computer Communications</td>
+                    <td>Human-Computer Interaction</td>
+                    <td>Public Communications</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems</td>
+                    <td>Database Systems</td>
+                    <td>OO Analysis and Design</td>
+                </tr>
+                <tr>
+                    <td>Software Dev Methods/ Tools </td>
+                    <td>Programming Languages</td>
+                    <td>Comp Org & Assembly Lang</td>
+                </tr>
+                <tr>
+                    <td>Algorithms </td>
+                    <td>Data Sci w Prob/Stat</td>
+                    <td>Discrete Structures</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <!---------------------CONTACT------------------->
+
+        <div class="Contact" id="Contact-Section">
+            <h1>CONTACT</h1>
+            <div class="card-Contact">
+                <h4>Phone</h4>
+                <p>(913)626-6126</p>
+                <h4>Email</h4>
+                <p>nick.willson@ icloud.com</p>
+                <h4>Links</h4>
+                <a href="https://www.linkedin.com/in/nicholas-willson-69748819b/" target="_blank">
+                    <img src=Images/linkedin.png id="linkedin" alt="linkedIn" style=" margin-left: 43%; ">
+                </a>
+                <a href="https://github.com/nickgwillson" target="_blank">
+                    <img src=Images/github.png alt="Github" id="github" style=" margin-right: 41%; ">
+                </a>
             </div>
         </div>
 
-        <div class="details-CSV">
-            <h2>Create Video From CSV File</h2>
-            <div class="card">
-                <p>
-                    One day my manager came up to me and told me that he learned that there was an employee down in the basement having to manually edit, change the specs of,
-                    and encode (render) hundreds of videos stored on the company servers, and asked if I could lend a hand. I created a program which takes in a CSV file
-                    containing the path of the video on our server, as well as the audio your want for that video, along with the frame rate and dimensions you want the
-                    video to be into. After creating this CSV file you simply open my Adobe extension, upload the CSV file, and watch while my program will automatically
-                    combine the video with the audio, change the specs to the correct frame rate and dimensions, render this video, encode it, and then send all the
-                    finalized videos to a folder of your choosing. This one was real difficultt but very satisfying once I got it working.
-                </p>
-            </div>
-        </div>
-
-        <div class="details-Localization">
-            <h2>Video Localization</h2>
-            <div class="card">
-                <p>
-                    For this program I was tasked with preparing movie clips for localization, which is what happes when an movie needs translations into other languages. For this
-                    program I was tasked with making the process of preparing a video for localization easier for the editors. Normally what happens when an editor is localizing a clip is
-                    that he would have to find all the clips that contain english lets say, grab these clips and export them, then go to each clip and add the name of the language it needs
-                    to be translated into, but that edited clip back into the sequence (movie/trailer/eg.) and then send this whole sequence to a folder with the name of the needed language
-                    translation, and do this for every language needed. Well I thought that just sounded like to many stepe, so I created a program in which all the editors need to do is
-                    open my extension, select the clips that need translation, and tell the extension what languages you want to turn it into. From here my program does the rest of the work,
-                    and puts all the videos now ready to be sent to the translation team in a nice neat folder on your desktop (or wherever you'd like)
-                </p>
-            </div>
-        </div>
-
-        <div class="details-Website_Redesign">
-            <h2>Website Redesign </h2>
-            <div class="card">
-                <p>
-                    For this project my team and I were in charge of doing an entire overhaul of the website building bridges. We were tasked with changing all the aspects
-                    of the sight that needed to be changed in order to facilitate the use of the sight people with disabilities, with disabilities including things such as poor
-                    vision or unable to use a mouse/scroll wheel. This is very important for a website, and is something a lot of people overlook. The process of redesigning a
-                    website starts with using an extension tool on your browser to identify problems such as contrast or structural errors. We then go about fixing the internal HTML
-                    of the website to facilitate use by the disabled, and then restructure the styling of the sight so that all contrast errors are gone, as well as making it overall easier
-                    to navigate.
-                </p>
-            </div>
-        </div>
-
-        <div class="Misc-Extensions">
-            <h2>Misc Panel Extensions </h2>
-            <div class="card">
-                <p>
-                    These were some of the first extensions created for Adobe's PPRO and Encoder. The purpose of these three extensions where to make some of the most common
-                    tasks in an editors life just a little bit fast. The first extension seen in this video is simply a catch all for what an editor might need, whether it be how
-                    many clips or words are in a video, or to upload a template for title cards, or to create the defaulted STARZ editor set up. The last two extensions are just to shorten
-                    the number of buttons that editors needed to press when either exporting bins (which are simply folders with videos inside), or creating them, and although they seem quite simply
-                    in both appearence and technicality, they can be mightly useful time-savers.
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <!----------------------RESUME------------------------------------->
-    <div class="Work" id="Work-Section">
-        <h1>PROFESSIONAL EXPERIENCE</h1>
-        <h2>SKILLS</h2>
-        <ul class="w3-ul">
-            <li></li>
-            <li>C++</li>
-            <li>HTML</li>
-            <li>Python</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li></li>
-        </ul>
         <br /><br /><br /><br /><br />
-        <h2>JOBS</h2>
-        <ul class="w3-ul">
-            <li></li>
-            <li><h3>MIDDLEWARE DEVELOPER - STARZ ENTERTAINMENT LLC</h3></li>
-            <li></li>
-        </ul>
-        <p>
-            Solely responsible for full development, testing, and launching of Adobe panel
-            extensions for STARZ’s entire production team. As the only employee working on panel extensions, my job was to
-            develop panel extensions for the production team with an express goal of decreasing number of repetitive tasks
-            performed. Learned unique industry practices in 2 weeks, and by the end of 4 months, created 7 independent
-            ready-to-publish Adobe extensions.
-        </p>
-        <p id="Work-bulletin">
-            <br />● Developed and maintained custom-made Adobe extensions using Python, JS, CSS, and HTML
-            <br />● Created Adobe Photoshop/PPRO extensions using VSC, Adobe’s APIs, AGILE and OOP methodologies
-            <br />● First point of contact in STARZ’s Englewood location for troubleshooting Adobe extensions
-            <br />● Interviewed heads of production in order to ascertain areas of improvement
-            <br />● Learned new industry methods and how to perform in a solo environment
-        </p>
-        <br /><br /><br /><br /><br />
 
-
-        <h2>COURSEWORK</h2>
-        <table>
-            <tr>
-                <td>Computer Science l,ll</td>
-                <td>Data Structures </td>
-                <td>CyberSecurity </td>
-            </tr>
-            <tr>
-                <td>Computer Communications</td>
-                <td>Human-Computer Interaction</td>
-                <td>Public Communications</td>
-            </tr>
-            <tr>
-                <td>Operating Systems</td>
-                <td>Database Systems</td>
-                <td>OO Analysis and Design</td>
-            </tr>
-            <tr>
-                <td>Software Dev Methods/ Tools </td>
-                <td>Programming Languages</td>
-                <td>Comp Org & Assembly Lang</td>
-            </tr>
-            <tr>
-                <td>Algorithms </td>
-                <td>Data Sci w Prob/Stat</td>
-                <td>Discrete Structures</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-    </div>
-
-
-    <!---------------------CONTACT------------------->
-
-    <div class="Contact" id="Contact-Section">
-        <h1>CONTACT</h1>
-        <div class="card-Contact">
-            <h4>Phone</h4>
-            <p>(913)626-6126</p>
-            <h4>Email</h4>
-            <p>nick.willson@icloud.com</p>
-            <h4>Links</h4>
-            <a href="https://www.linkedin.com/in/nicholas-willson-69748819b/">
-                <img src=Images/linkedin.png alt="linkedIn" style=" margin-left: 41%; ">
-            </a>
-            <a href="https://github.com/nickgwillson">
-                <img src=Images/github.png alt="linkedIn" style=" margin-right: 41%; ">
-            </a>
-
+        <div class="footer">
+            <p>This Website was Designed and Created by Me</p>
         </div>
-    </div>
-
-    <br /><br /><br /><br /><br />
-
-    <div class="footer">
-        <p>This Website was Designed and Created by Me</p>
-    </div>
 
 
 </body>
