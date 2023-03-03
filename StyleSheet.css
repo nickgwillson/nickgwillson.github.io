@@ -701,6 +701,7 @@ body {
         height: auto;
     }
 
+/*---------resize the contact card when on phone -------*/
     @media (max-width:700px){
         .card-Contact{
             width:80%;
